@@ -2,38 +2,38 @@
 <html>
   <head>
     <meta charset="UTF-8" />
-    <title>Add Multiple React components on a single HTML page</title>
-        <!-- Load React. -->
-    <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
-    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin defer></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin defer></script>
+    <title>Hello World</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-    <!-- Load our React component. -->
-    <script src="like-button.js" defer></script>
+    <!-- Don't use this in production: -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
   </head>
   <body>
+    <div id="root"></div>
+    <script type="text/babel">
+    
+      function MyApp() {
+        return <h1>Hello, world!</h1>;
+      }
 
-    <h2>Add Multiple React components on a single HTML page</h2>
-    <p>This page demonstrates using React with no build tooling to add multiple components to a single page.</p>
-    <p>React is loaded as a script tag.</p>
+      const container = document.getElementById('root');
+      const root = ReactDOM.createRoot(container);
+      root.render(<MyApp />);
 
-    <p>
-      This is the first comment.
-      <!-- We will put our React component inside this div. -->
-      <div class="like-button-root" data-commentid="1"></div>
-    </p>
+    </script>
+    <!--
+      Note: this page is a great way to try React but it's not suitable for production.
+      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
 
-    <p>
-      This is the second comment.
-      <!-- We will put our React component inside this div. -->
-      <div class="like-button-root" data-commentid="2"></div>
-    </p>
+      Read this section for a production-ready setup with JSX:
+      https://reactjs.org/docs/add-react-to-a-website.html#add-jsx-to-a-project
 
-    <p>
-      This is the third comment.
-      <!-- We will put our React component inside this div. -->
-      <div class="like-button-root" data-commentid="3"></div>
-    </p>
+      In a larger project, you can use an integrated toolchain that includes JSX instead:
+      https://reactjs.org/docs/create-a-new-react-app.html
 
+      You can also use React without JSX, in which case you can remove Babel:
+      https://reactjs.org/docs/react-without-jsx.html
+    -->
   </body>
 </html>
