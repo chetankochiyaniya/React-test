@@ -19,3 +19,7 @@ function LikeButton() {
 const rootNode = document.getElementById('like-button-root');
 const root = ReactDOM.createRoot(rootNode);
 root.render(React.createElement(LikeButton));
+
+const rootNode2 = document.getElementById("like-button-root2");
+const root2 = ReactDOM.createRoot(rootNode2);
+root2.render(React.createElement(LikeButton))
