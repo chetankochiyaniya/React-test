@@ -7,35 +7,32 @@
 //=====================
 
 
-const React = require('react')
-const ReactDOM = require('react-dom/client');
+// const React = require('react')
+// const ReactDOM = require('react-dom/client');
 
 
-class App extends React.Component{
- /* constructor() {
-    super()
-    this.state = {
-      edata: ["chetan kochiyaniya",21,6353074971]
-    }
-  } */
-  // OR 
-  // below code
-  state = {edata: ["chetan kochiyaniya",21,6353074971]}
+// class App extends React.Component{
+//   state = {edata: ["chetan kochiyaniya",21,6353074971]}
 
-    render() {
-      let list = this.state.edata
-      list = list.map((item)=><li key={item}>{item}</li>)
+//     render() {
+//       let list = this.state.edata
+//       list = list.map((item,index)=><List item={item} key={index}/>)
 
-      return <div>
-      <h1>Employees Details</h1>
-      <ul>
-        {list}
-      </ul>
-    </div>;
-  }
-} 
+//       return <div>
+//       <h1>Employees Details</h1>
+//       <ul>
+//         {list}
+//       </ul>
+//     </div>;
+//   }
+// } 
 
-ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+// class List extends React.Component{
+//   render(){
+//     return <li>{this.props.item}</li>
+//   }
+// }
+// ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 
 
 
@@ -48,19 +45,23 @@ ReactDOM.createRoot(document.getElementById('root')).render(<App />);
 //=======================
 
 
-// import React, { useState } from 'react';
-// import ReactDOM from 'react-dom/client';
+import React, { useState } from 'react';
+import ReactDOM from 'react-dom/client';
 
-// const App = () => {
-//   const [data,setData] = useState({edata: ["chetan kochiyaniya",21,6353074971]})
-//   const list =  data.edata.map((item,ind)=><li key={ind}>{item}</li>)
+const App = () => {
+  const [data,setData] = useState({edata: ["chetan kochiyaniya",21,6353074971]})
+  const list =  data.edata.map((item,ind)=><List item={item} key={ind}/>)
 
-//   return (
-//     <div>
-//       <h1>Employees Details</h1>
-//       <ul>{list}</ul>
-//     </div>
-//   );
-// };
+  return (
+    <div>
+      <h1>Employees Details</h1>
+      <ul>{list}</ul>
+    </div>
+  );
+};
 
-// ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+
+const List =(props)=>{
+return <li>{props.item}</li>
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
