@@ -1,14 +1,12 @@
-import './App.css';
 import React from 'react';
-import "./class-componets/ShoppingList"
-import ShoppingList from './class-componets/ShoppingList';
+import ReactDOM from 'react-dom';
 
-function App() {
+const App = () => {
   return (
-    <>
-    <ShoppingList name="chetan"/>
-    </>
+    <div>
+      <h1>Hello, World!</h1>
+    </div>
   );
-}
+};
 
-export default App;
+ReactDOM.render(<App />, document.getElementById('root'));
