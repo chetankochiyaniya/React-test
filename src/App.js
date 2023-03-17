@@ -61,12 +61,25 @@ const App = () => {
 
   const list =  data.edata.map((item,ind)=><List item={item} key={ind} handelOnDelete={onDelete}/>)
 
+  const Temp=()=>{
+    console.log("worked")
+  }
   return (
     <div>
       <h1>Employees Details</h1>
       <ul>{list}</ul>
+      <Test>
+        Hiii
+      </Test>
+      <Test>
+        <div onClick={Temp}>Hello chetan</div>
+      </Test>
     </div>
   );
 };
+
+const Test = (props)=>{
+  return <><p>Hello i'm on test component</p>{props.children}</>
+}
 
 ReactDOM.createRoot(document.getElementById('root')).render(<App />);
