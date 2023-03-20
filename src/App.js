@@ -1,9 +1,7 @@
 import React from 'react';
-import StateDemo from './UseState/StateDemo';
+import EffectDemo from './UseEffect/EffectDemo';
 function App() {
-  return (
- <><StateDemo /></>
-  );
+  return <EffectDemo />
 }
 
 export default App;
