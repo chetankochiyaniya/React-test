@@ -1,13 +1,24 @@
+import logo from './logo.svg';
 import './App.css';
-import React from 'react';
-import "./class-componets/ShoppingList"
-import ShoppingList from './class-componets/ShoppingList';
 
 function App() {
   return (
-    <>
-    <ShoppingList name="chetan"/>
-    </>
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
   );
 }
 
