@@ -1,7 +1,8 @@
 import React from 'react';
-import EffectDemo from './UseEffect/EffectDemo';
+
+import ReducerDemo from './UseReducer/ReducerDemo';
 function App() {
-  return <EffectDemo />
+  return <><ReducerDemo/></>
 }
 
 export default App;
