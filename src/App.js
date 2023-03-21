@@ -1,7 +1,7 @@
 import React from 'react';
-import ContextDemo from './UseContext/ContextTutorial';
+import UseID from './UseId/UseID';
 function App() {
-  return <ContextDemo />
+  return <UseID/>
 }
 
 export default App;
