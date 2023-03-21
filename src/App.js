@@ -1,8 +1,8 @@
 import React from 'react';
-
-import ReducerDemo from './UseReducer/ReducerDemo';
+import LayoutEffect from './UseLayoutEffect/LayoutEffectDemo';
+import RefDemo from './UseRef/RefDemo';
 function App() {
-  return <><ReducerDemo/></>
+  return <LayoutEffect />
 }
 
 export default App;
