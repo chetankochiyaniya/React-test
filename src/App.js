@@ -1,8 +1,7 @@
 import React from 'react';
-import LayoutEffect from './UseLayoutEffect/LayoutEffectDemo';
-import RefDemo from './UseRef/RefDemo';
+import ImperativeHandle from "./UseImperativeHandle/ImperativeHandle"
 function App() {
-  return <LayoutEffect />
+  return <ImperativeHandle />
 }
 
 export default App;
