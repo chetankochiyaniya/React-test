@@ -1,7 +1,7 @@
 import React from 'react';
-import ImperativeHandle from "./UseImperativeHandle/ImperativeHandle"
+import ContextDemo from './UseContext/ContextTutorial';
 function App() {
-  return <ImperativeHandle />
+  return <ContextDemo />
 }
 
 export default App;
