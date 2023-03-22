@@ -1,7 +1,7 @@
 import React from 'react';
-import UseID from './UseId/UseID';
+import UseMemoDemo from './UseMemo/UseMemo';
 function App() {
-  return <UseID/>
+  return <UseMemoDemo />
 }
 
 export default App;
