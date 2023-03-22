@@ -14,7 +14,6 @@ export default function UseMemoDemo() {
   }, []);
 
   const findLongestName = (comments) => {
-    if (!comments) return null;
 
     let longestName = "";
     for (let i = 0; i < comments.length; i++) {
@@ -29,7 +28,9 @@ export default function UseMemoDemo() {
     return longestName;
   };
 
-  const getLongestName = useMemo(() => findLongestName(data), [data]);
+  /* o ensure that data is not null before calling findLongestName. 
+  One way to do this is to use the optional chaining operator ?., like this: */
+  const getLongestName = useMemo(() => data?.length && findLongestName(data), [data]);
 
   return (
     <div className="App">
