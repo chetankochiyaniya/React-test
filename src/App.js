@@ -1,7 +1,8 @@
 import React from 'react';
-import UseMemoDemo from './UseMemo/UseMemo';
+import UseCallback from './UseCallback/Usecallback';
+
 function App() {
-  return <UseMemoDemo />
+  return <UseCallback />
 }
 
 export default App;
