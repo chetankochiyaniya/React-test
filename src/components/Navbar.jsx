@@ -9,7 +9,7 @@ const NavaBar = () => {
              * Link is for links that need no highlighting. And a is for external links. */}
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/about">About</NavLink></li>
-            <li><NavLink to="/product">Product</NavLink></li>
+            <li><NavLink to="/product/5">Product</NavLink></li>
         </ul>
     </>
 }
