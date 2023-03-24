@@ -1,11 +1,15 @@
-import { Link } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 
 const NavaBar = () => {
     return <>
         <ul>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/product">Product</Link></li>
+            {/**The NavLink is used when you want to highlight a link as active. 
+             * So, on every routing to a page, the link is highlighted according to the activeClassName . 
+             * Other Css style for NavLink 
+             * Link is for links that need no highlighting. And a is for external links. */}
+            <li><NavLink to="/">Home</NavLink></li>
+            <li><NavLink to="/about">About</NavLink></li>
+            <li><NavLink to="/product">Product</NavLink></li>
         </ul>
     </>
 }
