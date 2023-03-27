@@ -1,4 +1,5 @@
 import { useParams } from "react-router";
+import React from 'react';
 
 const Product =()=>{
     const { id } = useParams();
